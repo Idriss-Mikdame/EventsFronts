@@ -1,1 +1,17 @@
-<p>clientlist works!</p>
+<div class="test">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="card m-3" style="width: 18rem;" *ngFor="let client of ClientList">
+        <div class="card-body">
+          <h5 class="card-title">Utilisateur</h5>
+
+          <h6 class="card-subtitle mb-2 text-body-secondary">Nom: {{client.nom}}</h6>
+          <p class="card-text">Email : {{client.email}}</p>
+          <p class="card-text"><b>Numero de client :</b>  {{client.id}}</p>
+          <a (click)="Supprimeclient(client.id)" class="card-link"><i class="bi bi-trash3-fill"></i></a>
+          <a  [routerLink]="['/ModIClient',client.id]" href="#" class="card-link"><i class="bi bi-pen-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

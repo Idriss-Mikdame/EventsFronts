@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button (click)="mydrawar.toggle()">
-    <mat-icon>menu</mat-icon>
+  <button mat-icon-button routerLink="/hoem">
+    HelloEvents
   </button>
 
   <span style="flex: 1 1 auto;"></span>
@@ -45,37 +45,10 @@
 </mat-toolbar>
 
 <mat-drawer-container>
-  <mat-drawer #mydrawar opened="true" position="start" mode="side">
-    <mat-nav-list class="custom-list">
-      <mat-list-item class="custom-item">
-        <button mat-button>
-          <mat-icon>dashboard</mat-icon>
-          Dashboard
-        </button>
-      </mat-list-item>
-      <mat-list-item class="custom-item">
-        <button routerLink="/AffClient" mat-button>
-          <mat-icon>group</mat-icon>
-          Client
-        </button>
-      </mat-list-item>
-      <mat-list-item class="custom-item">
-        <button mat-button>
-          <mat-icon>event</mat-icon>
-          Evenement
-        </button>
-      </mat-list-item>
-      <mat-list-item class="custom-item">
-        <button mat-button>
-          <mat-icon>book_online</mat-icon>
-          Reservation
-        </button>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-drawer>
+
 
   <mat-drawer-content>
-    <div style="min-height: 800px">
+    <div >
       <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>

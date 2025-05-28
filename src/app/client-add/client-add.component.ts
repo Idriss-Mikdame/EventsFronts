@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ClinetService} from '../services/clinet.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-client-add',
@@ -9,11 +10,12 @@ import {ClinetService} from '../services/clinet.service';
 export class ClientADDComponent  implements OnInit {
   ClientList:any[] = []
   client = {
+    id : '',
     nom : '',
     email : '',
     motdepasse :''
   }
-  constructor(private clientServices:ClinetService) {
+  constructor(private clientServices:ClinetService,private route:Router) {
   }
 
   ngOnInit(): void {
@@ -29,7 +31,11 @@ export class ClientADDComponent  implements OnInit {
   ajouteClient(){
     this.clientServices.AjouterClient(this.client).subscribe(cliebtadd=>{
       this.ClientList = cliebtadd;
-
+      if (cliebtadd){
+        this.route.navigateByUrl('/AffClient');
+      }
     })
   }
+
+
 }

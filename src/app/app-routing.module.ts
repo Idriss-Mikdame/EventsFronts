@@ -10,7 +10,7 @@ const routes: Routes = [
   {path : "home",component:HomeComponent},
   {path : "AddClient",component:ClientADDComponent},
   {path : "AffClient",component:ClientlistComponent},
-  {path : "ModIClient",component:ClientModifierComponent},
+  {path : "ModIClient/:id",component:ClientModifierComponent},
   {path : "About",component:AboutComponent},
 ];
 

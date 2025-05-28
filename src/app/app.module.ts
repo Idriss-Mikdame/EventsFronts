@@ -20,7 +20,8 @@ import {DataRowOutlet} from '@angular/cdk/table';
 import {MatCard, MatCardHeader, MatCardModule} from '@angular/material/card';
 import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, provideHttpClient, withFetch} from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {HttpClientModule} from '@angular/common/http';
     AboutComponent,
     ClientADDComponent,
     ClientlistComponent,
-    ClientModifierComponent
+    ClientModifierComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,7 @@ import {HttpClientModule} from '@angular/common/http';
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

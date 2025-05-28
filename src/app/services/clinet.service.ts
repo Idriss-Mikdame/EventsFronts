@@ -21,11 +21,11 @@ export class ClinetService {
     afficherClientparid(id:any) : Observable<any> {
     return this.http.get(`${this.url}/${id}`);
     }
-  SupprimerClient(id:any):Observable<any>{
+  SupprimerClient(id:number):Observable<any>{
     return this.http.delete(`${this.url}/${id}`)
   }
 
-  Editclient(edittData : any):Observable<any>{
-    return this.http.put("http://localhost:8089/client"+ edittData.id,edittData)
+  Editclient(edittData : any,id:number):Observable<any>{
+    return this.http.put(`${this.url}/${id}`,edittData)
   }
 }

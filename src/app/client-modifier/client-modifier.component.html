@@ -1,1 +1,17 @@
-<p>client-modifier works!</p>
+<form class="coontainer" (ngSubmit)="editForm()">
+  <div class="mb-3">
+    <label class="form-label" >Ajoute le nom :</label>
+    <input class="form-control" [(ngModel)]="client.nom" name="nom" type="text" placeholder="Entrez votre nom">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" >Ajoute Email :</label>
+    <input class="form-control" [(ngModel)]="client.email"  name="email" type="email" placeholder="Entrez votre nom">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" >Ajoute le mot de pass:</label>
+    <input class="form-control" [(ngModel)]="client.motdepasse"  name="motdepasse" type="password" placeholder="Entrez votre nom">
+  </div>
+  <div>
+    <input  class="mt-3 mb-3 form-control-lg btn btn-outline-danger" type="submit" value="Modifier">  </div>
+
+</form>
