@@ -1,0 +1,15 @@
+.custom-list {
+  padding: 0;
+}
+
+.custom-item {
+  padding: 0;
+  margin: 2px 0;
+  min-height: 36px; /* ou moins si tu veux encore plus compact */
+}
+
+.custom-item button {
+  width: 100%;
+  padding: 4px 8px;
+  justify-content: flex-start;
+}

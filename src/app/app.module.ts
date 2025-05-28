@@ -11,11 +11,26 @@ import {MatIcon, MatIconModule} from '@angular/material/icon';
 import {MatMenu, MatMenuModule} from '@angular/material/menu';
 import {MatDrawerContainer, MatSidenavModule} from '@angular/material/sidenav';
 import {MatList, MatListModule} from '@angular/material/list';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ClientADDComponent } from './client-add/client-add.component';
+import { ClientlistComponent } from './clientlist/clientlist.component';
+import { ClientModifierComponent } from './client-modifier/client-modifier.component';
+import {DataRowOutlet} from '@angular/cdk/table';
+import {MatCard, MatCardHeader, MatCardModule} from '@angular/material/card';
+import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AminTemplatComponent
+    AminTemplatComponent,
+    HomeComponent,
+    AboutComponent,
+    ClientADDComponent,
+    ClientlistComponent,
+    ClientModifierComponent
   ],
   imports: [
     BrowserModule,
@@ -26,11 +41,18 @@ import {MatList, MatListModule} from '@angular/material/list';
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    DataRowOutlet,
+    MatCardModule,
+    MatCardHeader,
+    MatFormFieldModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
   ],
   bootstrap: [AppComponent]
 })

@@ -2,65 +2,82 @@
   <button mat-icon-button (click)="mydrawar.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span style="flex: auto"></span>
-  <button mat-button>Home</button>
-  <button mat-button>Profile</button>
+
+  <span style="flex: 1 1 auto;"></span>
+
+  <button routerLink="/home" mat-button>Home</button>
+  <button routerLink="/About" mat-button>About</button>
+
+  <!-- Menu Client -->
   <button mat-button [mat-menu-trigger-for]="importMenu">
-    <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
-    Client</button>
+    Client
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
   <mat-menu #importMenu>
-    <button mat-menu-item>Ajoute</button>
-    <button mat-menu-item>Affiche</button>
-    <button mat-menu-item>Modifier</button>
+    <button mat-menu-item routerLink="/AddClient">Ajouter</button>
+    <button mat-menu-item routerLink="/AffClient">Afficher</button>
+    <button mat-menu-item routerLink="/ModIClient">Modifier</button>
   </mat-menu>
+
+  <!-- Menu Reservation -->
   <button mat-button [mat-menu-trigger-for]="Reser">
-      <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
-    Reservation</button>
+    Reservation
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
   <mat-menu #Reser>
-    <button mat-menu-item>Ajoute</button>
-    <button mat-menu-item>Affiche</button>
+    <button mat-menu-item>Ajouter</button>
+    <button mat-menu-item>Afficher</button>
     <button mat-menu-item>Modifier</button>
   </mat-menu>
+
+  <!-- Menu Evenement -->
   <button mat-button [mat-menu-trigger-for]="event">
-    <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
-    Evenement</button>
+    Evenement
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
   <mat-menu #event>
-    <button mat-menu-item>Ajoute</button>
-    <button mat-menu-item>Affiche</button>
+    <button mat-menu-item>Ajouter</button>
+    <button mat-menu-item>Afficher</button>
     <button mat-menu-item>Modifier</button>
   </mat-menu>
+
   <button mat-button>Logout</button>
 </mat-toolbar>
 
 <mat-drawer-container>
-    <mat-drawer #mydrawar opened="true" position="start" mode="side">
-      <mat-list>
-        <mat-list-item>
-              <button mat-button>
-                <mat-icon>dashboard</mat-icon>
-                Dashboard</button>
-        </mat-list-item>
-        <mat-list-item>
-          <button mat-button>
-            <mat-icon>dashboard</mat-icon>
-            Client</button>
-        </mat-list-item>
-        <mat-list-item>
-          <button mat-button>
-            <mat-icon>dashboard</mat-icon>
-            Evenement</button>
-        </mat-list-item>
-        <mat-list-item>
-          <button mat-button>
-            <mat-icon>dashboard</mat-icon>
-            Reservation</button>
-        </mat-list-item>
-      </mat-list>
+  <mat-drawer #mydrawar opened="true" position="start" mode="side">
+    <mat-nav-list class="custom-list">
+      <mat-list-item class="custom-item">
+        <button mat-button>
+          <mat-icon>dashboard</mat-icon>
+          Dashboard
+        </button>
+      </mat-list-item>
+      <mat-list-item class="custom-item">
+        <button routerLink="/AffClient" mat-button>
+          <mat-icon>group</mat-icon>
+          Client
+        </button>
+      </mat-list-item>
+      <mat-list-item class="custom-item">
+        <button mat-button>
+          <mat-icon>event</mat-icon>
+          Evenement
+        </button>
+      </mat-list-item>
+      <mat-list-item class="custom-item">
+        <button mat-button>
+          <mat-icon>book_online</mat-icon>
+          Reservation
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
 
-    </mat-drawer>
   <mat-drawer-content>
     <div style="min-height: 800px">
       <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
+
