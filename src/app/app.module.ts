@@ -4,7 +4,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { AminTemplatComponent } from './amin-templat/amin-templat.component';
+import { AminTemplatComponent } from './navbar/amin-templat.component';
 import {MatToolbar, MatToolbarModule} from '@angular/material/toolbar';
 import {MatButton, MatButtonModule, MatIconButton} from '@angular/material/button';
 import {MatIcon, MatIconModule} from '@angular/material/icon';
