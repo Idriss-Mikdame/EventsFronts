@@ -1,0 +1,29 @@
+<form class="coontainer" (ngSubmit)="AjouterEvent()" >
+  <div class="mb-3">
+    <label class="form-label" >Ajoute Capacite :</label>
+    <input class="form-control" [(ngModel)]="Event.capacite" name="capacite" type="number" >
+  </div>
+  <div class="mb-3">
+    <label class="form-label" >Ajoute Category :</label>
+    <input class="form-control" [(ngModel)]="Event.categorie" name="categorie" type="text" >
+  </div>
+  <div class="mb-3">
+    <label class="form-label" >Ajoute Date :</label>
+    <input class="form-control" [(ngModel)]="Event.date"   name="date" type="date" >
+  </div>
+  <div class="mb-3">
+    <label class="form-label" >Ajoute Description :</label>
+    <input class="form-control" [(ngModel)]="Event.description" name="description" type="text" >
+  </div>
+  <div class="mb-3">
+    <label class="form-label" >Ajoute lieu :</label>
+    <input class="form-control" [(ngModel)]="Event.lieu" name="lieu" type="text" placeholder="Entrez votre nom">
+  </div>
+  <div class="mb-3">
+    <label class="form-label" >Ajoute Titre :</label>
+    <input class="form-control" [(ngModel)]="Event.titre"   name="titre" type="text" placeholder="Entrez votre nom">
+  </div>
+  <div>
+    <input  class="mt-3 mb-3 form-control-lg btn btn-outline-danger" type="submit" value="Ajouter">  </div>
+
+</form>

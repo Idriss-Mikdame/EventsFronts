@@ -1,0 +1,20 @@
+<div class="test">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="card m-3" style="width: 18rem;" *ngFor="let Event of ListEvent">
+        <div class="card-body">
+          <h5 class="card-title">Utilisateur</h5>
+
+          <h6 class="card-subtitle mb-2 text-body-secondary"><b>Titre Evenement :</b> {{Event.titre}}</h6>
+          <p class="card-text"><b>Un description :</b> {{Event.description}}</p>
+          <p class="card-text"><b>lieu Eevnt :</b>  {{Event.lieu}}</p>
+          <p class="card-text"><b>Date Eevnt :</b>  {{Event.date}}</p>
+          <p class="card-text"><b>Categorie Eevnt :</b>  {{Event.categorie}}</p>
+          <p class="card-text"><b>capacite Eevnt :</b>  {{Event.capacite}}</p>
+          <a style="cursor: pointer" (click)="SupprimerEvent(Event.id)"  class="card-link"><i class="bi bi-trash3-fill"></i></a>
+          <a style="cursor: pointer" [routerLink]="['/ModifierEvent',Event.id]"   href="#" class="card-link"><i class="bi bi-pen-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

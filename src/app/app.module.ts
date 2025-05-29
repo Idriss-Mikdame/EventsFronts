@@ -13,15 +13,18 @@ import {MatDrawerContainer, MatSidenavModule} from '@angular/material/sidenav';
 import {MatList, MatListModule} from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ClientADDComponent } from './client-add/client-add.component';
-import { ClientlistComponent } from './clientlist/clientlist.component';
-import { ClientModifierComponent } from './client-modifier/client-modifier.component';
+import { ClientADDComponent } from './Client/client-add/client-add.component';
+import { ClientlistComponent } from './Client/clientlist/clientlist.component';
+import { ClientModifierComponent } from './Client/client-modifier/client-modifier.component';
 import {DataRowOutlet} from '@angular/cdk/table';
 import {MatCard, MatCardHeader, MatCardModule} from '@angular/material/card';
 import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule, provideHttpClient, withFetch} from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { AddEventComponent } from './Event/add-event/add-event.component';
+import { ListEventComponent } from './Event/list-event/list-event.component';
+import { ModifierEventComponent } from './Event/modifier-event/modifier-event.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { FooterComponent } from './footer/footer.component';
     ClientADDComponent,
     ClientlistComponent,
     ClientModifierComponent,
-    FooterComponent
+    FooterComponent,
+    AddEventComponent,
+    ListEventComponent,
+    ModifierEventComponent
   ],
   imports: [
     BrowserModule,

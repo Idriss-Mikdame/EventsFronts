@@ -16,10 +16,9 @@
   <mat-menu #importMenu>
     <button mat-menu-item routerLink="/AddClient">Ajouter</button>
     <button mat-menu-item routerLink="/AffClient">Afficher</button>
-    <button mat-menu-item routerLink="/ModIClient">Modifier</button>
+
   </mat-menu>
 
-  <!-- Menu Reservation -->
   <button mat-button [mat-menu-trigger-for]="Reser">
     Reservation
     <mat-icon>keyboard_arrow_down</mat-icon>
@@ -27,7 +26,7 @@
   <mat-menu #Reser>
     <button mat-menu-item>Ajouter</button>
     <button mat-menu-item>Afficher</button>
-    <button mat-menu-item>Modifier</button>
+
   </mat-menu>
 
   <!-- Menu Evenement -->
@@ -36,9 +35,9 @@
     <mat-icon>keyboard_arrow_down</mat-icon>
   </button>
   <mat-menu #event>
-    <button mat-menu-item>Ajouter</button>
-    <button mat-menu-item>Afficher</button>
-    <button mat-menu-item>Modifier</button>
+    <button mat-menu-item routerLink="/AddEvent">Ajouter</button>
+    <button mat-menu-item routerLink="/AffEvent">Afficher</button>
+
   </mat-menu>
 
   <button mat-button>Logout</button>

@@ -1,0 +1,15 @@
+#banner{
+  background-image: linear-gradient(to top, #051937, #195066, #538a8c, #9fc4b2, #f6ffe2);  color: #fff;
+  padding-top: 5%;
+}
+.promo-titre{
+  font-size: 40px;
+  font-weight: bold;
+
+}
+img{
+  border-radius: 5%;
+  box-shadow: 6px 19px 97px 21px rgba(230,0,0,0.65);
+  -webkit-box-shadow: 6px 19px 97px 21px rgba(230,0,0,0.65);
+  -moz-box-shadow: 6px 19px 97px 21px rgba(230,0,0,0.65);
+}

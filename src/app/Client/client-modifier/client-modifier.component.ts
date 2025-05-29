@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ClinetService} from '../services/clinet.service';
+import {ClinetService} from '../../services/clinet.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

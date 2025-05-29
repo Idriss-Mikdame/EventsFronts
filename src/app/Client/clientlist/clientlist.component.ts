@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ClinetService} from '../services/clinet.service';
+import {ClinetService} from '../../services/clinet.service';
 
 @Component({
   selector: 'app-clientlist',
@@ -22,7 +22,7 @@ export class ClientlistComponent implements OnInit {
   }
   Supprimeclient(id:number){
     console.log("ok")
-    let conf = confirm("'Voulez-vous le supprimer Article?")
+    let conf = confirm("'Voulez-vous le supprimer Client?")
     if (conf){
       this.Clienservices.SupprimerClient(id).subscribe(supprime=>{
         if (supprime){
