@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+          <h2 class="mb-4 titre">Faire une Réservation</h2>
+            <form (ngSubmit)="AddReservation()">
+              <div class="mb-3" >
+                <label class="form-label required-field">Événement</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option value="">Sélectionner un événement.</option>
+                  <option *ngFor="let event of ListEvent" [value]="Reservation.idevent">{{ event.titre }}({{event.date | date}})</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label required-field">Client</label>
+               <select class="form-select" aria-label="Default select example">
+                 <option>Sélectionner un client</option>
+                 <option *ngFor="let client of ClientList" [value]="Reservation.iduser" >{{client.nom}}-({{client.email}})</option>
+               </select>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label required-field">Date de réservation</label>
+                  <input type="date"[(ngModel)]="Reservation.reseravtionDate" name="reseravtionDate" class="form-control" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label required-field">Nombre de places</label>
+                  <input type="number"[(ngModel)]="Reservation.reservationNumber" name="reservationNumber"  class="form-control" required>
+                </div>
+              </div>
+              <div class="text-center mb-5 mt-3">
+                <input type="submit" class="btn btn-custom btn-lg" value="Confirmer la Réservation">
+              </div>
+            </form>
+      </div>
+    </div>
+</div>

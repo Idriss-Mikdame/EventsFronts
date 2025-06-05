@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EventService} from '../../services/event.service';
 import {Router} from '@angular/router';
+import {formatDate} from '@angular/common';
 
 @Component({
   selector: 'app-list-event',
@@ -30,9 +31,13 @@ export class ListEventComponent implements OnInit {
       this.eventService.SupprimerClient(id).subscribe(Supprimer=>{
         this.ListEvent=Supprimer;
         console.log(Supprimer)
-
+        if (Supprimer){
+          this.ListEvent
+        }
         window.location.reload();
       })
     }
   }
+
+  protected readonly formatDate = formatDate;
 }

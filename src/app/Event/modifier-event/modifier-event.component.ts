@@ -10,12 +10,12 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class ModifierEventComponent implements OnInit {
   Event = {
     id:'',
-    titre:'',
+    capacite:'',
     description:'',
     lieu:'',
     date:'',
     categorie:'',
-    capacite:''
+    titre:''
   }
   public id:any
   constructor(private eventServices:EventService,private router:Router,
@@ -24,7 +24,7 @@ export class ModifierEventComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
-
+  this.getClientByid();
 
   }
   getClientByid(){

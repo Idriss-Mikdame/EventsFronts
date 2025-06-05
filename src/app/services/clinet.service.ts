@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class ClinetService {
 
-  private url="http://localhost:8089/client"
+  private url="http://localhost:1010/api/v1/clients"
   constructor(private http: HttpClient) { }
 
     AfficheClient():Observable<any> {

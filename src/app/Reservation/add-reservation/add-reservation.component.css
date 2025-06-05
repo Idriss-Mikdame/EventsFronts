@@ -1,0 +1,18 @@
+.titre{
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+.btn-custom {
+  background-color: #4a6baf;
+  color: white;
+  font-weight: 500;
+}
+.btn-custom:hover {
+  background-color: #3a5a9f;
+  color: white;
+}
+.required-field::after {
+  content: " *";
+  color: red;
+}

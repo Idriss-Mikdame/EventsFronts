@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 export class EventService {
 
   constructor(private http: HttpClient) { }
-  private url = "http://localhost:8089/Event";
+  private url = "http://localhost:1010/api/v1/events";
 
   AfficheEvent():Observable<any> {
     return this.http.get<any>(this.url);

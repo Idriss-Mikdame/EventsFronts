@@ -25,6 +25,10 @@ import { FooterComponent } from './footer/footer.component';
 import { AddEventComponent } from './Event/add-event/add-event.component';
 import { ListEventComponent } from './Event/list-event/list-event.component';
 import { ModifierEventComponent } from './Event/modifier-event/modifier-event.component';
+import { AddReservationComponent } from './Reservation/add-reservation/add-reservation.component';
+import { ListReservationComponent } from './Reservation/list-reservation/list-reservation.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,11 @@ import { ModifierEventComponent } from './Event/modifier-event/modifier-event.co
     FooterComponent,
     AddEventComponent,
     ListEventComponent,
-    ModifierEventComponent
+    ModifierEventComponent,
+    AddReservationComponent,
+    ListReservationComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
