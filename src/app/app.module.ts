@@ -19,7 +19,7 @@ import { ClientModifierComponent } from './Client/client-modifier/client-modifie
 import {DataRowOutlet} from '@angular/cdk/table';
 import {MatCard, MatCardHeader, MatCardModule} from '@angular/material/card';
 import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, provideHttpClient, withFetch} from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { AddEventComponent } from './Event/add-event/add-event.component';
@@ -29,6 +29,7 @@ import { AddReservationComponent } from './Reservation/add-reservation/add-reser
 import { ListReservationComponent } from './Reservation/list-reservation/list-reservation.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import {MatInput} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,9 @@ import { LoginComponent } from './login/login.component';
     MatCardHeader,
     MatFormFieldModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatInput
 
   ],
   providers: [
